@@ -9,5 +9,7 @@ describe('secondGreatLow', function() {
 });
 
 describe("timeConvert", function() {
-	
+	it("should convert minutes into hours and minutes", function() {
+		expect(timeConvert(63)).toEqual('1:3')
+	});
 });

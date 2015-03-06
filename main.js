@@ -15,3 +15,9 @@ var secondGreatLow = function(arr){
 
 	return Math.min.apply(Math, arr) + ' ' + Math.max.apply(Math, arr)
 }
+
+var timeConvert = function(num){
+	var hours = Math.floor(num / 60)
+	var minutes = num % 60
+	return hours + ':' + minutes
+};
