@@ -21,3 +21,13 @@ var timeConvert = function(num){
 	var minutes = num % 60
 	return hours + ':' + minutes
 };
+
+var bracketMatcher = function(str){
+	var opening = str.match(/\(/g)
+	var closing = str.match(/\)/g)
+	if (opening && closing) {
+		return opening.length === closing.length
+	} else if (!opening && !closing ){
+		return true
+	}
+};

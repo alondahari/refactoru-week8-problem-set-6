@@ -13,3 +13,12 @@ describe("timeConvert", function() {
 		expect(timeConvert(63)).toEqual('1:3')
 	});
 });
+
+describe("bracketMatcher", function() {
+	it("should return true if all brackets are accounted for", function() {
+		expect(bracketMatcher('(hello (world))')).toBeTruthy()
+		expect(bracketMatcher('((hello (world))')).not.toBeTruthy()
+		expect(bracketMatcher('hello')).toBeTruthy()
+		expect(bracketMatcher('(hello')).not.toBeTruthy()
+	});
+});
